@@ -99,7 +99,7 @@ function cleanup_layout() {
     echo "Cleaning up $DVD_LAYOUT ..."
     find $DVD_LAYOUT -name TRANS.TBL -exec rm '{}' \;
     mv $DVD_LAYOUT/repodata/*-c${RELEASE:0:1}-x86_64-comps.xml $DVD_LAYOUT/repodata/comps.xml
-    find $DVD_LAYOUT/repodata -type f ! -name 'comps.xml' -exec rm '{}' \;
+    find $DVD_LAYOUT/repodata -type f ! -name 'comps.xml' -exec rm -f '{}' \;
 
 }
 
